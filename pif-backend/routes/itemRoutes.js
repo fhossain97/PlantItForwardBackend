@@ -1,7 +1,8 @@
-import {Router} from 'express'
-import * as controllers from '../controllers/itemControllers.js'
-const router = Router()
+//ok
+const router = require('express').Router()
+const itemCtrl = require('../controllers/itemControllers')
 
-router.get('/', controllers.index)
+router.get('/', itemCtrl.index)
 
-export default router 
+
+module.exports = router 

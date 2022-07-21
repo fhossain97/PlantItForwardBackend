@@ -1,6 +1,6 @@
-import Item from '../models/Item.js'
+const Item = require('../models/Item')
 
-export const index = (req, res) => {
+const index = (req, res) => {
     Item.find({}, (err, items) => {
         if(err) {
         res.status(400).json(err)
@@ -8,4 +8,8 @@ export const index = (req, res) => {
     }
     res.json(items)
 })
+}
+
+module.exports = {
+    index
 }
