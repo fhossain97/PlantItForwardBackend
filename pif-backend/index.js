@@ -1,23 +1,23 @@
-import './db/connection.js'
-import itemRoutes from './routes/itemRoutes.js'
-import express from 'express'
-const PORT = 3000
-import morgan from 'morgan'
+//ok
+const express = require('express')
 const app = express()
+const morgan = require('morgan')
+const PORT = 8000
+const cors = require('cors')
+const itemRoutes = require('./routes/itemRoutes')
+require('./db/connection')
 
-import cors from 'cors'
-
-app.use(express.json())
 app.use(cors())
 app.use(morgan('tiny'))
+
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.use('/item', itemRoutes)
 
 app.get('/', (req, res) => {
     res.json ('Welcome Plant Friend')
 })
-
-app.use('/item', itemRoutes)
 
 
 app.listen(PORT, () => {
