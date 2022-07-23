@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const PORT = 8000
 const cors = require('cors')
 const itemRoutes = require('./routes/itemRoutes')
+
 require('./db/connection')
 
 app.use(cors())
