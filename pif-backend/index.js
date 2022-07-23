@@ -1,10 +1,12 @@
-//ok
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const PORT = 8000
 const cors = require('cors')
 const itemRoutes = require('./routes/itemRoutes')
+const multer = require('multer')
+
+
 require('./db/connection')
 
 app.use(cors())
@@ -21,5 +23,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log('Your connection hast bloomed', PORT)
+    console.log('Your connection hast bloomed 🌼🌸❀✿🌷 on', PORT)
 })
