@@ -23,5 +23,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log('Your connection hast bloomed 🌼🌸❀✿🌷 on', PORT)
+    console.log('Your connection bloomed 🌱🪴 🌺 on', PORT)
 })

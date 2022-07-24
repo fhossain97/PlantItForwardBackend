@@ -21,11 +21,23 @@ const showOneItem = (req,res) =>{
 }
 
 const createNewItem = async (req,res) =>{
+    console.log(req.file);
+    if (req.file) {
+      req.body.images = "/" + req.file.filename;
+    }
+
     let newItem = await Item.create(req.body)
+    newItem.save(() => console.log("New Planet Saved!"));
+    Item.findById(newItem._id)
     res.json(newItem)
 }
 
 const updateItem = (req,res) =>{
+    console.log(req.file);
+    if (req.file) {
+      req.body.images = "/" + req.file.filename;
+    }
+    console.log(req.file);
     Item.findByIdAndUpdate(req.params.id, req.body, (err,item) => {
         if(err){
             res.status(400).json(err)
@@ -47,10 +59,21 @@ const deleteItem = (req,res) =>{
     })
 }
 
+const newRoute = (req, res) => {
+    res.render("new");
+  };
+
+
+const editRoute = (req, res) => {
+    res.render("edit", { item: Item, id: req.params.id });
+  } 
+
 module.exports = {
     index,
     showOneItem,
     createNewItem,
     updateItem,
-    deleteItem
+    deleteItem,
+    newRoute,
+    editRoute
 }
