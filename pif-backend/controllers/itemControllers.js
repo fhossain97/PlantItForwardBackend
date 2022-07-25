@@ -27,7 +27,7 @@ const createNewItem = async (req,res) =>{
     }
 
     let newItem = await Item.create(req.body)
-    newItem.save(() => console.log("New Planet Saved!"));
+    newItem.save(() => console.log("New Plant Saved!"));
     Item.findById(newItem._id)
     res.json(newItem)
 }
