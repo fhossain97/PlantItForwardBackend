@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const itemSchema = new mongoose.Schema ({
     name: String,
     quantity: Number,
-    image: String,
+    images: String,
     description: String,
     genus: String,
     status: String

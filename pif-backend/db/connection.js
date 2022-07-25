@@ -8,6 +8,6 @@ mongoose.connect(process.env.DATABASE_URL, {
 })
 
 .then(instance => {
-    console.log(`connected on ${instance.connections[0].name}`)
+    console.log(`Connected on ${instance.connections[0].name}`)
 })
 .catch(err => console.log(`Got an error plant friend, see details: ${err}`))
