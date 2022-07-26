@@ -8,6 +8,7 @@ const userRoutes = require('./routes/userRoutes')
 const multer = require('multer')
 
 require('./db/connection')
+require('dotenv').config();
 
 app.use(cors())
 app.use(morgan('tiny'))
