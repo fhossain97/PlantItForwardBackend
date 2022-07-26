@@ -43,7 +43,15 @@ const items =
             genus: 'Curio',
             status: '1 available' 
         },
-
+        {   
+            name: 'Japanese Camellia',
+            quantity: 5,
+            image: 'http://s3-us-west-2.amazonaws.com/cypdb/350w/camellia-japonica-flower.jpg',
+            description: 'There are many cultivars with flowers up to 6 inches in winter-spring. The colors are variable. The gardener needs to watch for scales, aphids, chewing insects and fungal diseases. It requires acid soil and will have problems if pH is too high.',
+            genus: 'Camellia',
+            status: '5 plants available' 
+        },
+        
     ]
 
 
