@@ -14,7 +14,7 @@ const items =
         {   
             name: 'Jade Plant',
             quantity: 5,
-            images: 'https://imgur.com/v1EO74r',
+            images: 'https://i.imgur.com/v1EO74r.jpeg',
             description: 'First come, first serve!  5 little jades available :) ',
             genus: 'Ceropegia',
             status: '5' 
@@ -22,7 +22,7 @@ const items =
         {   
             name: 'Living Stone - Lithops',
             quantity: 1,
-            images: 'https://imgur.com/shhhl5j',
+            images: 'https://i.imgur.com/shhhl5j.jpeg',
             description: 'I grew these from seeds!  Last one. Looking for rare plant for trade.',
             genus: 'Lithops',
             status: '0' 
@@ -30,7 +30,7 @@ const items =
         {   
             name: 'Wandering Dude - T. Zebrina Pendula',
             quantity: 4,
-            images: 'https://imgur.com/SIk0jGM',
+            images: 'https://i.imgur.com/SIk0jGM.jpeg',
             description: 'Available to a good plant parent!',
             genus: 'Tradescantia',
             status: '4 available' 
@@ -46,7 +46,7 @@ const items =
         {   
             name: 'Japanese Camellia',
             quantity: 5,
-            image: 'http://s3-us-west-2.amazonaws.com/cypdb/350w/camellia-japonica-flower.jpg',
+            images: 'http://s3-us-west-2.amazonaws.com/cypdb/350w/camellia-japonica-flower.jpg',
             description: 'There are many cultivars with flowers up to 6 inches in winter-spring. The colors are variable. The gardener needs to watch for scales, aphids, chewing insects and fungal diseases. It requires acid soil and will have problems if pH is too high.',
             genus: 'Camellia',
             status: '5 plants available' 
