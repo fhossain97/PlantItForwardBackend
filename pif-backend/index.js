@@ -6,6 +6,8 @@ const cors = require('cors')
 const itemRoutes = require('./routes/itemRoutes')
 const userRoutes = require('./routes/userRoutes')
 const multer = require('multer')
+const cloudinary = require("cloudinary").v2;
+const {CloudinaryStorage} = require('multer-storage-cloudinary')
 
 require('./db/connection')
 require('dotenv').config();

@@ -8,6 +8,7 @@ const index = (req, res) => {
     }
     res.json(items)
 })
+.populate("owner")
 }
 
 const showOneItem = (req,res) =>{
@@ -29,6 +30,7 @@ const createNewItem = async (req,res) =>{
     let newItem = await Item.create(req.body)
     newItem.save(() => console.log("New Plant Saved!"));
     Item.findById(newItem._id)
+    .populate("owner")
     res.json(newItem)
 }
 
@@ -47,6 +49,7 @@ const updateItem = (req,res) =>{
             res.json(items)
         })
     })
+    .populate("owner")
 }
 
 const deleteItem = (req,res) =>{
