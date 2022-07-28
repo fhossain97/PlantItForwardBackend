@@ -1,4 +1,5 @@
 const Item = require('../models/Item')
+const {uploads}= require('../db/cloudinary')
 
 const index = (req, res) => {
     Item.find({}, (err, items) => {
@@ -24,9 +25,11 @@ const showOneItem = (req,res) =>{
 const createNewItem = async (req,res) =>{
     console.log(req.file);
     if (req.file) {
-      req.body.images = "/" + req.file.filename;
+      req.body.images = req.file.path;
     }
-
+console.log(req.body)
+    //let newImage = await uploads(req.file)
+//console.log(newImage)
     let newItem = await Item.create(req.body)
     newItem.save(() => console.log("New Plant Saved!"));
     Item.findById(newItem._id)
@@ -37,9 +40,9 @@ const createNewItem = async (req,res) =>{
 const updateItem = (req,res) =>{
     console.log(req.file);
     if (req.file) {
-      req.body.images = "/" + req.file.filename;
+      req.body.images = req.file.path;
     }
-    console.log(req.file);
+    console.log(req.body);
     Item.findByIdAndUpdate(req.params.id, req.body, (err,item) => {
         if(err){
             res.status(400).json(err)
