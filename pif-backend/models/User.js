@@ -4,22 +4,32 @@ const bcrypt = require('bcrypt');
 const SALT_ROUNDS = 6;
 
 const userSchema = new mongoose.Schema({
-    isAdmin: Boolean,
     name: String,
-    password: String,
-    receipts: []
+    password: String
 })
 
-const User = mongoose.model('User', userSchema)
+userSchema.set('toJSON', {
+  transform: function(doc, ret) {
+    delete ret.password;
+    return ret;
+  }
+});
 
-userSchema.pre('save', function(next) {
-    const user = this;
-    if (!user.isModified('password')) return next();
-    bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash) {
-      if (err) return next(err);
-      user.password = hash;
-      next();
-    });
-})
+userSchema.methods.comparePassword = function(tryPassword, cb){
+  bcrypt.compare(tryPassword, this.password, cb)
+}
 
-module.exports = User
+
+userSchema.pre('save', function(next){
+  const user = this;
+  if (!user.isModified('password')) return next();
+  bcrypt.hash(user.password, SALT_ROUNDS, function(err, hash){
+    if (err) return next(err);
+    user.password = hash; 
+    next();
+  });
+});
+
+
+module.exports = mongoose.model('User', userSchema);
+
