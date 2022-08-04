@@ -18,14 +18,14 @@ app.use(express.json())
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }))
 
-
-app.use('/item', itemRoutes)
-app.use('/user', userRoutes)
-
 app.get('/', (req, res) => {
     res.redirect('/item')
     res.json ('Welcome Plant Friend')
 })
+
+app.use('/item', itemRoutes)
+app.use('/user', userRoutes)
+
 
 
 app.listen(PORT, () => {
