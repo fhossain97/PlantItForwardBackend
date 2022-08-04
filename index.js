@@ -23,6 +23,7 @@ app.use('/item', itemRoutes)
 app.use('/user', userRoutes)
 
 app.get('/', (req, res) => {
+    res.redirect('/item')
     res.json ('Welcome Plant Friend')
 })
 
