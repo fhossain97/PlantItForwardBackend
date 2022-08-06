@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
-const PORT = 8000
+const PORT = process.env.PORT || 8000;
 const cors = require('cors')
 const itemRoutes = require('./routes/itemRoutes')
 const userRoutes = require('./routes/userRoutes')
@@ -18,13 +18,14 @@ app.use(express.json())
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }))
 
+app.get('/', (req, res) => {
+    res.redirect('/item')
+    res.json ('Welcome Plant Friend')
+})
 
 app.use('/item', itemRoutes)
 app.use('/user', userRoutes)
 
-app.get('/', (req, res) => {
-    res.json ('Welcome Plant Friend')
-})
 
 
 app.listen(PORT, () => {
