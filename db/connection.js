@@ -3,7 +3,8 @@ require('dotenv').config();
 
 console.log(process.env.DATABASE_URL);
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(
+    process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -11,4 +12,4 @@ mongoose.connect(process.env.DATABASE_URL, {
 .then(instance => {
     console.log(`Connected on ${instance.connections[0].name}`)
 })
-.catch(err => console.log(`Got an error plant friend! See details: ${err}`))
+.catch(err => console.log(`Error! See details: ${err}`))
