@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
     res.redirect('/item')
-    res.json ('Welcome Plant Friend')
+    res.json ('Welcome')
 })
 
 app.use('/item', itemRoutes)
