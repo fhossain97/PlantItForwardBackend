@@ -28,8 +28,6 @@ const createNewItem = async (req,res) =>{
       req.body.images = req.file.path;
     }
 console.log(req.body)
-    //let newImage = await uploads(req.file)
-//console.log(newImage)
     let newItem = await Item.create(req.body)
     newItem.save(() => console.log("New Plant Saved!"));
     Item.findById(newItem._id)
