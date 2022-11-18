@@ -1,15 +1,14 @@
-#Plant It Forward
+# Plant It Forward
 
-### GitHub Links
+# GH Links
 Frontend: https://github.com/fhossain97/PlantItFowardFrontEnd
 Backend: https://github.com/fhossain97/PlantItForwardBackend
 
-### Deployed Heroku Links
-Frontend: https://plant-it-forward.herokuapp.com/ 
-Backend: https://plant-it-forward-api.herokuapp.com/item 
+### Deployment Links
+Coming Soon!
 
 # Description  
-Plant It Forward is a plant trading app that adds an innovative twist on the timeless art of gardening.  Gardening is natural, healthy, free activity.  With the new recession, trading is an inclusive activity most can participate in for minimal fees (postage - even SASE for seeds).  Additionally, Plant It Forward contributes to a positive future culture that respects the time, generosity, and expertise of fellow humans.  Plant It Forward is the next integral people will use to connect across generations, cultures, and locations!
+Plant It Forward is a fun take on an e-commerce website without the $$$. Users are able to sign up, create new plants for trade, edit their plants, and so much more!
 
 # Wireframes 
 
@@ -18,39 +17,34 @@ Plant It Forward is a plant trading app that adds an innovative twist on the tim
 
 
 # App Details  
-
-Homepage with Login Features
+Homepage with Login and Sign-up
 Search Bar
-Item Update
+Plant Item Create and Edit
 Delete Modal
 Navigation Bar
-Google Locate
+Google Maps API
 Chat Feature
 
-## MVP 
-As a user 
-  - I would like to land on the homepage and see the navbar
-  - I would live to see the details for each plant available 
-  - I would like to be able to see when items are available or not
-  - I would like to be able to search for desired plants
-  - I would like the ability to filter available products 
-  - I would like to be able to add a plant to share 
-  - I would like to be able to update a plant that I have shared 
-  - I would like to be able to delete a plant I have shared 
+# MVP 
+As a user:
+- I want to land on the homepage and be able to login or sign-up
+- I want to be able to navigate to all the pages easily
+- I want to see details for each plant
+- I want to able to search, create, edit, and delete my plants 
+- I want to add in a plant for trade
+
+# Stretch Goals 
+ As a user:
+- I want to have a support chat for plant questions
+- I want to see my order history (both giving and receiving) and order plants
+- I want to be able to "order" (trade) in plants
+- I want to be able to drop pins on the map that save locations of florists nearby
 
 # Video Walkthrough
-<img src='/public/PIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./public/PIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 # Technologies Used
-
-Frontend: React, HTML, CSS, JavaScript, Express, Bootstrap
-Backend: Node JS, JSON API, Mongoose, MongoDB, Axios, MongoDB Atlas, Multer, Cloudinary
-
-# The repositories for the backend API/frontend includes:
-✅ A working JSON API built using Express and Mongoose (backend)
-✅ A working frontend application built with React
-✅ Frequent commits dating back to the very beginning of the project.
-✅ README.md file 
-
+Front-end: React.js,JSON API, Axios, React-Bootstrap, Tailwind CSS
+Back-end: Mongoose, MongoDB, MongoDB Atlas, Express.js, Cloudinary, Multer
