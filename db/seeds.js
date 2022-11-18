@@ -44,7 +44,7 @@ const items =
             status: 'Available' 
         },
         {   
-            name: 'Red Spinach - Amaranthus dubius',
+            name: 'Red Spinach',
             quantity: 5,
             images: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZl1r2Q5QAXEogcj2gEG-nx8nZq4pQoFWyaQ&usqp=CAU',
             description: 'A gem of a produce - red spinach is rich in nutrients and has a unique flavor profile. Check it out!',
