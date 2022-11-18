@@ -17,13 +17,13 @@ Plant It Forward is a fun take on an e-commerce website without the $$$. Users a
 
 
 # App Details  
-Homepage with Login and Sign-up
-Search Bar
-Plant Item Create and Edit
-Delete Modal
-Navigation Bar
-Google Maps API
-Chat Feature
+- Homepage with Login and Sign-up
+- Search Bar
+- Plant Item Create and Edit
+- Delete Modal
+- Navigation Bar
+- Google Maps API
+- Chat Feature
 
 # MVP 
 As a user:
@@ -45,7 +45,6 @@ As a user:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-# Technologies Used
 # Technologies Used
 - Front-end: React.js,JSON API, Axios, React-Bootstrap, Tailwind CSS
 - Back-end: Mongoose, MongoDB, MongoDB Atlas, Express.js, Cloudinary, Multer
