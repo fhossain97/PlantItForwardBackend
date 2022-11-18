@@ -1,8 +1,8 @@
 # Plant It Forward
 
 # GH Links
-Frontend: https://github.com/fhossain97/PlantItFowardFrontEnd
-Backend: https://github.com/fhossain97/PlantItForwardBackend
+- Frontend: https://github.com/fhossain97/PlantItFowardFrontEnd
+- Backend: https://github.com/fhossain97/PlantItForwardBackend
 
 ### Deployment Links
 Coming Soon!
