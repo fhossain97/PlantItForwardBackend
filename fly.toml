@@ -11,7 +11,7 @@ processes = []
 [env]
   PORT = "8080"
   MONGODB_URI = "mongodb+srv://fhossain:Taseer.12@plant-it-forward.itabia5.mongodb.net/?retryWrites=true&w=majority"
-  CLIENT_ORIGIN = "this will be the front end's deployed application"
+  CLIENT_ORIGIN = "https://63978b48147f093f5d1dba8b--ornate-blini-8dd49b.netlify.app"
 
 [experimental]
   allowed_public_ports = []
