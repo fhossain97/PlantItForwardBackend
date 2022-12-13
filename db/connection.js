@@ -1,15 +1,32 @@
-const mongoose = require('mongoose')
-require('dotenv').config();
+const mongoose = require("mongoose");
 
-console.log(process.env.DATABASE_URL);
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-mongoose.connect(
-    process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+const db = mongoose.connection;
 
-.then(instance => {
-    console.log(`Connected on ${instance.connections[0].name}`)
-})
-.catch(err => console.log(`Error! See details: ${err}`))
+db.on("connected", () => {
+  console.log(`Connected at ${db.host}:${db.port}`);
+});
+
+
+
+
+
+// const mongoose = require('mongoose')
+// require('dotenv').config();
+
+// console.log(process.env.DATABASE_URL);
+
+// mongoose.connect(
+//     process.env.DATABASE_URL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
+
+// .then(instance => {
+//     console.log(`Connected on ${instance.connections[0].name}`)
+// })
+// .catch(err => console.log(`Error! See details: ${err}`))
