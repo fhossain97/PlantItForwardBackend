@@ -5,7 +5,7 @@
 - Backend: https://github.com/fhossain97/PlantItForwardBackend
 
 ### Deployment Links
-- Frontend: https://63978b48147f093f5d1dba8b--ornate-blini-8dd49b.netlify.app
+- Frontend: https://ornate-blini-8dd49b.netlify.app/
 - Backend: https://plant-it-forward.fly.dev/item
 
 # Description  
