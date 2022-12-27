@@ -19,7 +19,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-    res.redirect('/signup')
+    res.redirect('/user/signup')
     // res.json ('Welcome')
 })
 
